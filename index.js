@@ -1,3 +1,5 @@
+alert("Game is oF Two Minutes Enjoy The Game....");
+var time=2*60;
 // making text array 
 var arr1=["hello", "hsbdhds" ,"jbjs","this","is","java","complete","the","game","a","hgfh","otherwise","gsjddh","joking"];
 var arr2=["yoou","are","jsnjc","serious","yes","i","am","bjcbscn","jbsj","mnbv","goat","load","coding","bcvxxaa"];
@@ -178,21 +180,36 @@ else{
 }
 })
 
+// watch
+var watch=document.getElementById('watch');
 
-
-setTimeout(stop,120000);
-
-function stop(){
+var timeinterval=setInterval(running,1000);
+function running(){
+    time--;
+    var minutes=Math.floor(time/60);
+    var second=time%60;
+    if(second<10){
+        watch.innerHTML=minutes+":0"+second;
+    }
+    else{
+        watch.innerHTML=minutes+":"+second;
+    }
+    
+    if(time==0){
+ clearInterval(timeinterval);
 clearInterval(id1);
 clearInterval(id2);
 clearInterval(id3);
 clearInterval(id4);
+ time=2*60;
 heading.innerHTML="Your Score Is <b>"+score+ " </b>Please Visit Again...";
 document.getElementById('pop').style.display="block";
-// alert("Your Score Is "+ score);
+    }
 }
+
 
 
 document.getElementById('reload').addEventListener('click',function(){
     location.reload();
+    
 })
