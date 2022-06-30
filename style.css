@@ -22,6 +22,9 @@ body{
 }
 
 .inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border:1px solid white;
     /* border: 1px solid red; */
     box-shadow: #00FFDD 2px 2px 0.8rem 0.2rem;
@@ -36,6 +39,7 @@ body{
     margin-left: 0px;
     font-size: 100%;
     font-weight: 700;
+    text-align: center;
     overflow-wrap: break-word;
 
 }
@@ -156,4 +160,28 @@ h2{
     background-color: #005792;
     border: 1px solid white;
     box-shadow:#005792 10px 10px 0.5rem 0.1rem;
+}
+
+/* countdown */
+.countdown{
+    /* height: 50px;
+    width: 50px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #005792; */
+    /* border:1px solid white */
+}
+
+.countdown p{
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border:1px solid white;
+    box-shadow: rgb(195, 102, 102) 0px 0px 0.5rem 0.4rem;
+    background-color: #9DDAC6;
+    border-radius: 50%;
+    font-weight: 700;
 }
